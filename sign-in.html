@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sign Up</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="icon" href="img/unio.png">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="lib/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="lib/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="lib/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="lib/select2/select2.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="lib/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" href="css/custom.css">
+<link rel="stylesheet" href="css/util.css">
+
+  </head>
+  <body>
+    <div class="limiter">
+      <div class="container-login100">
+        <div class="wrap-login100">
+          <div class="login100-form-title">
+            <span class="login100-form-title-1">
+              Sign Up
+            </span>
+          </div>
+  
+          <form class="login100-form validate-form">
+              <div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
+                  <span class="label-input100">Username</span>
+                  <input class="input100" type="text" name="username" placeholder="Enter Username" required>
+                  <span class="focus-input100"></span>
+                </div>
+            <div class="wrap-input100 validate-input m-b-26" data-validate="Email ID is required">
+              <span class="label-input100">Email ID</span>
+              <input class="input100" type="email" name="username" placeholder="Enter email id" required>
+              <span class="focus-input100"></span>
+            </div>
+  
+            <div class="wrap-input100 validate-input m-b-18" data-validate = "Password is required">
+              <span class="label-input100">Password</span>
+              <input class="input100" type="password" name="pass" placeholder="Enter password" id="txtPassword" required>
+              <span class="focus-input100"></span>
+            </div>
+  
+            <div class="wrap-input100 validate-input m-b-18" data-validate = "Password is required">
+                <span class="label-input100">Confirm Password</span>
+                <input class="input100" type="password" name="pass" placeholder="Enter password" id="txtConfirmPassword" required>
+                <span class="focus-input100"></span>
+              </div>
+
+            <div class="flex-sb-m w-full p-b-30">
+              <div class="contact100-form-checkbox">
+                <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me" required>
+                <label class="label-checkbox100" for="ckb1">
+                  Remember me
+                </label>
+              </div>
+  
+              <div>
+                <a href="#" class="txt1">
+                
+                </a>
+              </div>
+            </div>
+<div class="container">
+            <div class="container-login100-form-btn">
+                <button class="login100-form-btn" value="Submit" onclick="return Validate()">
+                  Sign Up
+                </button>
+              </div>
+
+              <div class="container-login100-form-btn">
+                  <button class="btn-danger cancel" onclick="location.href = 'shop.html';">
+                    Cancel
+                  </button>
+                </div>
+</div>
+
+<hr> OR <hr>
+
+<div class="container-login100-form-btn">
+    <a href="#" class="btn btn-primary btn-block social-btn"><i class="fa fa-facebook pull-left"> </i>  Sign in with <b> Facebook</b></a>
+<a href="#" class="btn btn-danger btn-block social-btn"><i class="fa fa-google pull-left"> </i>  Sign in with <b> Google</b></a>
+</div>
+
+            <div>
+              <a href="login.html" class="txt1">Already have an account?</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    
+<!--===============================================================================================-->
+<script src="lib/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="lib/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="lib/bootstrap/js/popper.js"></script>
+	<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="lib/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="lib/daterangepicker/moment.min.js"></script>
+	<script src="lib/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="lib/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+    <script src="js/main.js"></script>
+
+    <script type="text/javascript">
+      function Validate() {
+          var password = document.getElementById("txtPassword").value;
+          var confirmPassword = document.getElementById("txtConfirmPassword").value;
+          if (password != confirmPassword) {
+              alert("Passwords do not match.");
+              return false;
+          }else{
+          return true;}
+      }
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+  </body>
+</html>
