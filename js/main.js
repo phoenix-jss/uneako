@@ -66,3 +66,20 @@
     
 
 })(jQuery);
+
+//cart.html JS
+ loadEventListeners();
+
+//Add to cart button on product page
+var addToCart = document.querySelector('.add-to-cart');
+console.log(addToCart);
+
+function loadEventListeners(){
+    addToCart.addEventListener('click', addedToCart )
+ }
+
+ function addedToCart(e){
+
+var img = document.getElementsByClassName('.product-main-image');
+ }
+
