@@ -283,7 +283,13 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .product-pics div{
-  border: 2px solid black;
+  /* border: 3px solid black; */
+  cursor: pointer;
+}
+
+.product-pics div img{
+  width: 100% !important;
+  height: 120px;
 }
 
 /* product descriiption section */
@@ -313,7 +319,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .share-icons a{
   color: white;
-  background: #4f4f4f
+  background: #17a2b8;
 }
 
 /* ----- */

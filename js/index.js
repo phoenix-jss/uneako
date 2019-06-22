@@ -62,3 +62,90 @@ $('.related-products').slick({
 // function updateNav(){
 //   productsAdded.innerHTML = itemsCount;
 // }
+
+
+// CHANGE QUANTITY ON INC AND DEC BUTTON
+
+var incButton = document.querySelector('#inc-quantity');
+var decButton = document.querySelector('#dec-quantity');
+var quantityBox = document.querySelector('#qunatity');
+var quantity = 1;
+
+incButton.addEventListener('click', function(){
+  quantity++;
+  quantityBox.value = quantity;
+  console.log('clicked');
+});
+
+decButton.addEventListener('click', function(){
+  if(quantity > 1){
+    quantity--;
+  }
+  else{
+    quantity = 1;
+  }
+  quantityBox.value = quantity;
+  console.log('clicked');
+})
+
+// show alert when clicked on add to cart button
+var addToCartBtn = document.querySelector('#add-to-cart');
+var productName = document.querySelector('#product-title').innerText;
+
+addToCartBtn.addEventListener('click', function(){
+  console.log('clicked');
+  showAlert();
+})
+
+function showAlert(){
+  // clear any remaining alerts
+  clearAlert();
+
+  // create div
+  const div = document.createElement('div');
+
+  // classnames
+  const className = 'alert alert-success';
+
+  // message to be shown in alert
+  const message = `<a href="cart.html"><button type="button" class="btn btn-info">VIEW CART</button></a>
+   &nbsp; ${quantity} &times;  &nbsp;"${productName}" &nbsp; added to cart`;
+
+  // add classes
+  div.className = className;
+  // add text
+  // div.appendChild(document.createTextNode(message));
+  div.innerHTML = message;
+  // get parent
+  const container = document.querySelector('.product-description');
+  const share = document.querySelector('.share-icons');
+  container.insertBefore(div, share);
+
+  setTimeout(function(){
+    clearAlert();
+  }, 3000);
+}
+
+function clearAlert(){
+  const current = document.querySelector('.alert');
+
+  if(current){
+    current.remove();
+  }
+}
+
+// change product main image on click on small images
+
+var mainImage = document.querySelector('.product-main-image');
+var otherImages = document.querySelectorAll('.other-images');
+
+// set image src to first image of more images
+document.querySelector('.product-main-image').setAttribute('src', document.querySelectorAll('.other-images')[0].getAttribute('src'));
+
+// change image on click
+otherImages.forEach(function(image){
+  image.addEventListener('click', function(){
+    console.log('clicked');
+    mainImage.setAttribute('src', this.getAttribute('src'));
+  })
+})
