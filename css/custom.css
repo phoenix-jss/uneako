@@ -427,6 +427,10 @@ hr{
   background-color: #333333;
   color:white;
 }
+.btn-success:hover{
+  background-color: #333333;
+  color:white;
+}
 
 
 @media (max-width: 576px) {
