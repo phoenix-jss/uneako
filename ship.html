@@ -20,17 +20,20 @@
   <meta name="twitter:image" content="">
   <title>Shipping Details</title>
 
-   <!-- Bootstrap CSS File -->
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-   <!-- Libraries CSS Files -->
-   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
    <link href="lib/animate-css/animate.min.css" rel="stylesheet">
 
    <link rel="icon" href="img/unio.png">
    <link rel="stylesheet" href="css/style.css">
    <link rel="stylesheet" href="css/custom.css">
 
+
+   <!-- Bootstrap CSS File -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+   <!-- Libraries CSS Files -->
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+   
+   <link href="lib/animate-css/animate.min.css" rel="stylesheet">
      <!--===============================================================================================-->
 <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 <!--===============================================================================================-->
@@ -40,7 +43,7 @@
 <!--===============================================================================================-->	
 	<link rel="stylesheet" type="text/css" href="lib/css-hamburgers/hamburgers.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="lib/animsition/css/animsition.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="lib/select2/select2.min.css">
 <!--===============================================================================================-->	
@@ -56,11 +59,13 @@
   <header id="header">
     <div class="container">
 
-      <div id="logo" class="pull-left">
+     <div id="logo" class="pull-left">
         <a href="#hero"><img src="img/logo.png" alt="" title="" /></img></a>
       </div>
+      
 
-      <nav id="nav-menu-container" class="ml-auto ">
+      <nav id="nav-menu-container" class="ml-auto">
+        
         <ul class="nav-menu">
           <li><a href="index.html">Home</a></li>
           <li class="menu-active"><a href="shop.html">Shop</a></li>
@@ -90,27 +95,23 @@
               <span class="focus-input100"></span>
             </div>
   
-              
-              <div class="wrap-input100 select m-b-26">
-                  <span class="label-input100">Country</span>
-                <select name="country" class="countries" id="countryId">
-                    <option value="">Select Country</option>
-                </select>
-                </div>
+              <div class="wrap-input100 validate-input m-b-26">
+                <span class="label-input100">Country</span>
+                <input class="input100" type="text" name="country" placeholder="Enter your Country" required>
+                <span class="focus-input100"></span>
+              </div>
 
-                <div class="wrap-input100 select m-b-26">
-                    <span class="label-input100">State</span>
-                <select name="state" class="states" id="stateId">
-                    <option value="">Select State</option>
-                </select>
-                </div>
+              <div class="wrap-input100 validate-input m-b-26">
+                <span class="label-input100">State</span>
+                <input class="input100" type="text" name="state" placeholder="Enter your State" required>
+                <span class="focus-input100"></span>
+              </div>
 
-                <div class="wrap-input100 select m-b-26">
-                    <span class="label-input100">City</span>
-                <select name="city" class="cities" id="cityId">
-                    <option value="">Select City</option>
-                </select>
-                </div>
+              <div class="wrap-input100 validate-input m-b-26">
+                <span class="label-input100">City</span>
+                <input class="input100" type="text" name="city" placeholder="Enter your City" required>
+                <span class="focus-input100"></span>
+              </div>
 
                 <div class="wrap-input100 validate-input m-b-26">
                     <span class="label-input100">Address</span>
@@ -126,12 +127,12 @@
 
                     <div class="container">
             <div class="container-login100-form-btn">
-                <button class="login100-form-btn btn" value="Submit">
+                <button class="login100-form-btn btn btn-success" value="Submit" style="border-radius: 50px;">
                   Buy Now
                 </button>
               </div>
               <div class="container-login100-form-btn">
-                  <button class="btn-danger btn cancel" onclick="location.href = 'cart.html';">
+                  <button class="btn-danger btn cancel" style="border-radius: 50px;" onclick="location.href = 'cart.html';">
                     Cancel
                   </button>
                 </div>
@@ -188,7 +189,6 @@
 
 </body>
     
-<!--===============================================================================================-->
 <script src="lib/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->
 	<script src="lib/animsition/js/animsition.min.js"></script>
@@ -206,9 +206,14 @@
 	<script src="lib/countdowntime/countdowntime.js"></script>
 <!--===============================================================================================-->
     
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
-                <script src="//geodata.solutions/includes/countrystatecity.js"></script>
-                <script src="js/countrystatecity.js"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
  <!-- Required JavaScript Libraries -->
  <script src="lib/superfish/hoverIntent.js"></script>
  <script src="lib/superfish/superfish.min.js"></script>
