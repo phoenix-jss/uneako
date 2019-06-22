@@ -125,7 +125,9 @@
               <tbody>
                 <tr class="cart-form_cart-item cart_item">
                   <td class="product-remove">
-                    <a href="#" class="remove remove-product" aria-label="Remove this Item">X</a>
+                    <a href="#" class="remove remove-product" aria-label="Remove this Item" onclick="
+                    if(confirm('Are You Sure?')){
+ this.parentElement.parentElement.remove();}">X</a>
                   </td>
                   <td class="product-thumbnail">
                     <a href=""></a>
@@ -138,13 +140,27 @@
                 </td>
                 <td class="product-quantity">
                   <div class="quantity buttons_added">
-                    <button type="button" value="-" class="minus">-</button>
-                    <input type="number" name="" id="" class="input-text qty text text-center" step="1" min="0" value="1" title="Qty" size="4" pattern="[0-9]*" inputmode="numeric" aria-labelledby="">
-                    <button type="button" value="+" class="plus">+</button>
+
+                    <button type="button" value="-" class="minus" onclick="var result = document.getElementById('qty'); 
+                    var qty = result.value; 
+                    if( !isNaN( qty ) && qty > 1 ) 
+                    result.value--;
+                    return false;">-</button>
+
+
+                    <input type="number" name="" id="qty" class="input-text qty text text-center" step="1" min="0" value="1" title="Qty" size="4" pattern="[0-9]*" inputmode="numeric" aria-labelledby="">
+
+
+                    <button type="button" value="+" class="plus" onclick="var result = document.getElementById('qty'); 
+                    var qty = result.value; 
+                    if( !isNaN( qty ) && qty > 0 ) 
+                    result.value++;return false;">+</button>
+
+
                   </div>
                 </td>
                 <td class="product-subtotal">
-                  <span class="Priice-amount amount"></span>
+                  <span class="Price-amount amount"></span>
                 </td>
                 </tr>
   
