@@ -67,6 +67,7 @@
 
 })(jQuery);
 
+
 //cart.html JS
  loadEventListeners();
 

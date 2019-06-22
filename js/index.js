@@ -1,3 +1,4 @@
+// Related products Slick slider
 $('.related-products').slick({
   slidesToShow: 5,
   slidesToScroll: 1,
@@ -41,3 +42,23 @@ $('.related-products').slick({
  
     ]
 });
+
+// change button innerHTML to 'added to cart' on click
+// var addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
+// var productsAdded = document.querySelector('.items-on-cart');
+// var itemsCount = 0;
+
+
+// addToCartButtons.forEach(function(button) {
+//   button.addEventListener("click", function() {
+//     this.innerHTML = 'Added To Cart';
+//     this.disabled = true;
+//     itemsCount++;
+//     updateNav();
+//   });
+// });
+
+// // update no of products added to cart on navbar
+// function updateNav(){
+//   productsAdded.innerHTML = itemsCount;
+// }
