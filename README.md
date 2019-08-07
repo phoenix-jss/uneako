@@ -1,6 +1,6 @@
 # UNEAKO Ecommerce Website
 
-It is an Ecommerce Website built as an Internship Project to practice and learn new technologies and work as a team. It displays products of the company alone woth their details and facilitates the user to place the order accordingly.
+It is an Ecommerce Website built as an Internship Project to practice and learn new technologies and work as a team. It displays products of the company along with their details and facilitates the user to place the order accordingly.
 
 ### Technologies Used:
    * HTML
